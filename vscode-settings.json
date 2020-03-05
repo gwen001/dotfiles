@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "explorer.openEditors.visible": 0,
+    "window.zoomLevel": 0,
+    "editor.largeFileOptimizations": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+    "workbench.editor.showTabs": true,
+    "editor.minimap.enabled": false,
+    "workbench.editor.openPositioning": "last"
+}
