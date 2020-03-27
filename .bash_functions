@@ -1,4 +1,8 @@
 
+function apksign {
+  jarsigner -keystore ~/Android/debug.keystore -verbose -storepass android -keypass android -sigalg SHA1withDSA -digestalg SHA1 "$1" androiddebugkey
+}
+
 s3ls(){
 aws s3 ls s3://$1
 }

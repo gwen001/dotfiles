@@ -23,6 +23,7 @@ alias d='cd ~/Documents'
 alias t='cd ~/Downloads'
 alias s='cd ~/Security'
 alias bb='cd ~/Security/bugbounty'
+alias pp='cd ~/Security/mytools/pentest-tools/'
 
 alias gc='git clone'
 alias gs='git status'
