@@ -8,5 +8,24 @@
     "breadcrumbs.enabled": false,
     "workbench.editor.showTabs": true,
     "editor.minimap.enabled": false,
-    "workbench.editor.openPositioning": "last"
+    "workbench.editor.openPositioning": "last",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "python.jediEnabled": false,
+    "workbench.startupEditor": "none",
+    "explorer.autoReveal": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.tabSize": "4",
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+    }
 }

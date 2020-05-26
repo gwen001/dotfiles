@@ -103,5 +103,13 @@
     {
         "key": "ctrl+shift+t",
         "command": "editor.action.reindentselectedlines"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-workbench.view.search"
+    },
+    {
+        "key": "ctrl+k ctrl+h",
+        "command": "-workbench.action.output.toggleOutput"
     }
 ]

@@ -65,14 +65,16 @@ conky.config = {
 }
 
 conky.text = [[
-${time %d/%m/%Y}${alignr}${time %H:%M:%S}
-${voffset -16}${font sans-serif:bold:size=16}${color black}${alignc}$nodename${font}
-${voffset 4}${alignc}${time %A %d %B %Y}
-${font}${voffset -4}
-
+#${time %d/%m/%Y}${alignr}${time %H:%M:%S}
+#
+#${voffset -16}${font sans-serif:size=16}${color black}${alignc}$nodename${font}
+#${color}${voffset 4}${alignc}${time %A %d %B %Y}
+#${font}${voffset -4}
+#
 ${color black}SYSTEM ${hr}
- ${color grey}Distr:${color white} ${execi 1000 cat /etc/issue | awk '{out="";for(i=1;i<=NF-2;i++){out=out" "$i};print out}' | xargs echo -e}
- ${color grey}System:$color $sysname $kernel $machine
+ ${color grey}Model:${color white} ASUS ${execi 1000 cat /sys/devices/virtual/dmi/id/product_name}
+ ${color grey}Distr:${color white} ${execi 1000 cat /etc/issue | awk '{out="";for(i=1;i<=NF-2;i++){out=out" "$i};print out}' | xargs echo -e} $machine
+ ${color grey}Kernel:$color $sysname $kernel
  ${color grey}Uptime:$color $uptime
  ${color grey}Processes:$color $processes  ${color grey}Running:$color ${running_processes running}
 
@@ -88,7 +90,7 @@ ${color black}NETWORK ${hr}
  ${downspeedgraph wlp2s0 30,160 -l} $alignr${upspeedgraph wlp2s0 30,160 -l}
 
 ${color black}CPU ${hr}
- ${color grey}Model: ${color}${execi 1000 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
+ ${color grey}Model: ${color}${execi 1000 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//' | cut -d ' ' -f 1,2,3 | sed 's/([^)]*)//g'} @ ${execi 1000 grep process /proc/cpuinfo | wc -l}x ${execi 1000 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//' | cut -d ' ' -f 6}
  ${color grey}Usage: ${color}${cpu}% ${cpubar}
  ${cpugraph $cpu 30,}
  ${color grey}${top name 1} ${alignr}${color}${top pid 1}${color grey} ${top cpu 1}%
