@@ -20,12 +20,18 @@
     "explorer.compactFolders": false,
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.editor.focusRecentEditorAfterClose": false,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.tabSize": "4",
     "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
     "[markdown]": {
         "files.trimTrailingWhitespace": false,
-    }
+    },
+    "editor.detectIndentation": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "python.languageServer": "Microsoft",
+    "extensions.ignoreRecommendations": true,
+    "java.requirements.JDK11Warning": false,
+    "java.semanticHighlighting.enabled": true
 }

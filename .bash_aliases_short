@@ -11,13 +11,14 @@ alias grep='egrep --color '
 alias du1='du -h -d 1'
 alias as='aptitude search'
 alias ai='aptitude install'
-alias ap='aptitude purge'
 alias ass='dpkg -l | grep -i'
 alias dpkgs='dpkg -l | grep -i'
-alias sar='sudo brew services stop httpd ; sudo brew services start httpd'
 alias h='host'
-alias ha='host -t any'
 alias htop='htop -s PERCENT_CPU'
+alias sr='screen -R'
+alias sls='screen -ls'
+
+alias sar='sudo brew services stop httpd ; sudo brew services start httpd'
 
 alias gc='git clone'
 alias gs='git status'
@@ -27,3 +28,6 @@ alias gba='git branch -av'
 alias ghr='~/security/mytools/github-release.sh'
 
 alias gip='grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"'
+
+alias ps1="PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '"
+alias ps2="PS1='\[\033[01;32m\]\$\[\033[00m\] '"
