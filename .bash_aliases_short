@@ -18,7 +18,7 @@ alias htop='htop -s PERCENT_CPU'
 alias sr='screen -R'
 alias sls='screen -ls'
 
-alias sar='sudo brew services stop httpd ; sudo brew services start httpd'
+alias sar='service apache2 restart'
 
 alias gc='git clone'
 alias gs='git status'
